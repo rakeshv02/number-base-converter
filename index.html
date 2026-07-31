@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Number Base Converter — Binary, Octal, Decimal, Hex | Tabutility</title>
+<meta name="description" content="Convert numbers between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16) instantly. Free online number base converter — works in your browser."/>
+<link rel="canonical" href="https://number-base-converter.tabutility.com/"/>
+<meta property="og:title" content="Number Base Converter — Binary, Octal, Decimal, Hex"/>
+<meta property="og:description" content="Convert between binary, octal, decimal, and hexadecimal instantly. Free, client-side, no data sent anywhere."/>
+<meta property="og:url" content="https://number-base-converter.tabutility.com/"/>
+<meta property="og:type" content="website"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Number Base Converter","url":"https://number-base-converter.tabutility.com/","description":"Free online number base converter. Convert between binary, octal, decimal, and hexadecimal instantly.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Number Base Converter","item":"https://number-base-converter.tabutility.com/"}]}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+nav{background:#1e293b;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #334155}
+nav a{color:#a5b4fc;text-decoration:none;font-size:14px;font-weight:600}
+.container{max-width:700px;margin:0 auto;padding:24px 16px}
+h1{font-size:clamp(20px,4vw,30px);font-weight:800;margin-bottom:8px}
+.subtitle{color:#94a3b8;font-size:15px;margin-bottom:24px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:22px;margin-bottom:18px}
+.card h2{font-size:15px;font-weight:700;color:#a5b4fc;margin-bottom:16px}
+.base-row{display:grid;grid-template-columns:120px 1fr 80px;gap:10px;align-items:center;margin-bottom:12px}
+.base-label{font-size:13px;font-weight:700;color:#94a3b8}
+.base-sub{font-size:10px;color:#475569}
+.base-input{background:#0f172a;border:1px solid #475569;border-radius:8px;padding:10px 12px;color:#34d399;font-family:'Courier New',monospace;font-size:15px;outline:none;width:100%}
+.base-input:focus{border-color:#6366f1;color:#f1f5f9}
+.base-input.source{color:#f1f5f9;border-color:#6366f1}
+.copy-btn{background:#334155;border:none;border-radius:6px;padding:8px 10px;color:#94a3b8;font-size:12px;cursor:pointer}
+.copy-btn:hover{background:#475569;color:#f1f5f9}
+.error-msg{background:#2d1a1a;border:1px solid #7f1d1d;border-radius:8px;padding:12px;color:#fca5a5;font-size:13px;margin-top:10px;display:none}
+.bits-row{background:#0f172a;border-radius:8px;padding:12px;margin-top:10px;font-family:'Courier New',monospace;font-size:12px;color:#6366f1;word-break:break-all;line-height:1.8}
+.bits-row span{display:inline-block;margin:1px;padding:2px 4px;border-radius:3px;background:#1e293b}
+.adslot{min-height:90px;background:#1e293b;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#475569;font-size:12px;margin:20px 0}
+.faq-item{border-bottom:1px solid #334155;padding:14px 0}
+.faq-item summary{cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none;font-size:14px}
+.faq-item p{color:#94a3b8;font-size:13px;margin-top:8px;line-height:1.6}
+footer{text-align:center;padding:32px 16px;color:#475569;font-size:12px;border-top:1px solid #1e293b;margin-top:32px}
+@media(max-width:500px){.base-row{grid-template-columns:90px 1fr 60px}}
+</style>
+</head>
+<body>
+<nav><a href="https://tabutility.com">← All Tools</a><span style="color:#64748b;font-size:12px">Free · No sign-up</span></nav>
+<div class="container">
+  <h1>🔢 Number Base Converter</h1>
+  <p class="subtitle">Convert between binary, octal, decimal, and hexadecimal instantly. Type in any field and all others update live.</p>
+  <div class="adslot"><ins class="adsbygoogle" style="display:block;width:100%;height:90px" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="horizontal"></ins></div>
+  <div class="card">
+    <h2>Convert Number</h2>
+    <div class="base-row">
+      <div><div class="base-label">Binary</div><div class="base-sub">Base 2 · 0-1</div></div>
+      <input class="base-input" id="bin" placeholder="e.g. 1010" oninput="convert('bin',this.value,2)"/>
+      <button class="copy-btn" onclick="copyField('bin')">Copy</button>
+    </div>
+    <div class="base-row">
+      <div><div class="base-label">Octal</div><div class="base-sub">Base 8 · 0-7</div></div>
+      <input class="base-input" id="oct" placeholder="e.g. 17" oninput="convert('oct',this.value,8)"/>
+      <button class="copy-btn" onclick="copyField('oct')">Copy</button>
+    </div>
+    <div class="base-row">
+      <div><div class="base-label">Decimal</div><div class="base-sub">Base 10 · 0-9</div></div>
+      <input class="base-input" id="dec" placeholder="e.g. 42" oninput="convert('dec',this.value,10)"/>
+      <button class="copy-btn" onclick="copyField('dec')">Copy</button>
+    </div>
+    <div class="base-row">
+      <div><div class="base-label">Hex</div><div class="base-sub">Base 16 · 0-9, A-F</div></div>
+      <input class="base-input" id="hex" placeholder="e.g. 2A" oninput="convert('hex',this.value,16)"/>
+      <button class="copy-btn" onclick="copyField('hex')">Copy</button>
+    </div>
+    <div class="error-msg" id="error">Invalid input for the selected base.</div>
+    <div class="bits-row" id="bits-display" style="display:none"></div>
+  </div>
+  <div class="card">
+    <h2>Quick Reference</h2>
+    <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px;font-family:'Courier New',monospace">
+      <tr style="color:#94a3b8"><th style="padding:8px;text-align:right;border-bottom:1px solid #334155">Dec</th><th style="padding:8px;border-bottom:1px solid #334155">Bin</th><th style="padding:8px;border-bottom:1px solid #334155">Oct</th><th style="padding:8px;border-bottom:1px solid #334155">Hex</th></tr>
+      <tr><td style="padding:6px 8px;text-align:right;color:#94a3b8">0</td><td style="padding:6px 8px;color:#34d399">0</td><td style="padding:6px 8px;color:#a5b4fc">0</td><td style="padding:6px 8px;color:#f59e0b">0</td></tr>
+      <tr><td style="padding:6px 8px;text-align:right;color:#94a3b8">8</td><td style="padding:6px 8px;color:#34d399">1000</td><td style="padding:6px 8px;color:#a5b4fc">10</td><td style="padding:6px 8px;color:#f59e0b">8</td></tr>
+      <tr><td style="padding:6px 8px;text-align:right;color:#94a3b8">16</td><td style="padding:6px 8px;color:#34d399">10000</td><td style="padding:6px 8px;color:#a5b4fc">20</td><td style="padding:6px 8px;color:#f59e0b">10</td></tr>
+      <tr><td style="padding:6px 8px;text-align:right;color:#94a3b8">64</td><td style="padding:6px 8px;color:#34d399">1000000</td><td style="padding:6px 8px;color:#a5b4fc">100</td><td style="padding:6px 8px;color:#f59e0b">40</td></tr>
+      <tr><td style="padding:6px 8px;text-align:right;color:#94a3b8">128</td><td style="padding:6px 8px;color:#34d399">10000000</td><td style="padding:6px 8px;color:#a5b4fc">200</td><td style="padding:6px 8px;color:#f59e0b">80</td></tr>
+      <tr><td style="padding:6px 8px;text-align:right;color:#94a3b8">255</td><td style="padding:6px 8px;color:#34d399">11111111</td><td style="padding:6px 8px;color:#a5b4fc">377</td><td style="padding:6px 8px;color:#f59e0b">FF</td></tr>
+      <tr><td style="padding:6px 8px;text-align:right;color:#94a3b8">65536</td><td style="padding:6px 8px;color:#34d399">10000000000000000</td><td style="padding:6px 8px;color:#a5b4fc">200000</td><td style="padding:6px 8px;color:#f59e0b">10000</td></tr>
+    </table></div>
+  </div>
+  <div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.com/s?k=programming+coding+books&tag=tabutility-20','_blank','noopener noreferrer')">
+    <span style="font-size:28px;flex-shrink:0">📚</span>
+    <div><div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Level up your dev skills</div><div style="font-size:12px;color:#94a3b8">Browse programming books <span style="color:#f59e0b">→ Browse on Amazon</span></div><div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div></div>
+  </div>
+  <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:32px">
+    <a href="https://json-formatter.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">JSON Formatter</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+    <a href="https://base64-encoder.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Base64 Encoder</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+    <a href="https://uuid-generator.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">UUID Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+    <a href="https://hex-to-rgb.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">HEX to RGB Converter</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+  </div>
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+    <details class="faq-item"><summary>Why do computers use binary?</summary><p>Computers use binary because transistors — the fundamental building blocks — have two states: on (1) and off (0). This maps perfectly to binary. Everything a computer does, from adding numbers to displaying images, ultimately reduces to manipulating sequences of 0s and 1s.</p></details>
+    <details class="faq-item"><summary>Why is hexadecimal used in programming?</summary><p>Hex is used because one hex digit represents exactly 4 binary bits (a nibble), so two hex digits = one byte. This makes it far more human-readable than binary while still mapping cleanly to how computers work internally. It's widely used for memory addresses, colours (#FF6600), and byte-level data.</p></details>
+    <details class="faq-item"><summary>How do I convert binary to decimal manually?</summary><p>Each binary digit represents a power of 2, starting from the right. For 1011: (1×8) + (0×4) + (1×2) + (1×1) = 11. The tool does this instantly for any number.</p></details>
+    <details class="faq-item"><summary>What is octal used for?</summary><p>Octal was historically used in older computing systems. Today it's most commonly seen in Unix/Linux file permissions (e.g., chmod 755 means rwxr-xr-x). Each octal digit represents exactly 3 binary bits.</p></details>
+    <details class="faq-item"><summary>Is there a limit to the size of number I can convert?</summary><p>JavaScript uses 64-bit floating-point numbers (IEEE 754), which means integers are exact up to 2^53 − 1 (about 9 quadrillion). Beyond that, precision may be lost. For very large numbers, use a dedicated big-integer library.</p></details>
+  </div>
+</div>
+<footer>© 2024 Tabutility · 100% client-side · <a href="https://tabutility.com" style="color:#6366f1">All Tools</a></footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do computers use binary?","acceptedAnswer":{"@type":"Answer","text":"Computers use binary because transistors have two states: on (1) and off (0), mapping perfectly to binary."}},{"@type":"Question","name":"Why is hexadecimal used in programming?","acceptedAnswer":{"@type":"Answer","text":"One hex digit represents exactly 4 binary bits. Two hex digits = one byte, making it compact and human-readable."}},{"@type":"Question","name":"How do I convert binary to decimal manually?","acceptedAnswer":{"@type":"Answer","text":"Each binary digit represents a power of 2 from the right. For 1011: (1×8)+(0×4)+(1×2)+(1×1) = 11."}},{"@type":"Question","name":"What is octal used for?","acceptedAnswer":{"@type":"Answer","text":"Octal is most commonly seen in Unix/Linux file permissions (e.g., chmod 755). Each digit represents 3 binary bits."}}]}</script>
+<script>
+let updating=false;
+function convert(source,val,base){
+  if(updating)return;
+  updating=true;
+  const err=document.getElementById('error');
+  err.style.display='none';
+  document.querySelectorAll('.base-input').forEach(i=>i.classList.remove('source'));
+  document.getElementById(source).classList.add('source');
+  if(!val.trim()){['bin','oct','dec','hex'].forEach(id=>{if(id!==source)document.getElementById(id).value='';});document.getElementById('bits-display').style.display='none';updating=false;return;}
+  let n;
+  try{n=parseInt(val.replace(/\s/g,''),base);if(isNaN(n)||n<0)throw new Error();}
+  catch{err.style.display='block';updating=false;return;}
+  const b=n.toString(2);const o=n.toString(8);const d=n.toString(10);const h=n.toString(16).toUpperCase();
+  if(source!=='bin')document.getElementById('bin').value=b;
+  if(source!=='oct')document.getElementById('oct').value=o;
+  if(source!=='dec')document.getElementById('dec').value=d;
+  if(source!=='hex')document.getElementById('hex').value=h;
+  // Show bit display
+  const padded=b.padStart(Math.ceil(b.length/8)*8,'0');
+  const groups=padded.match(/.{1,8}/g)||[];
+  document.getElementById('bits-display').innerHTML='<span style="color:#64748b;font-size:11px">Bits: </span>'+groups.map(g=>`<span>${g}</span>`).join(' ');
+  document.getElementById('bits-display').style.display='block';
+  updating=false;
+}
+function copyField(id){const v=document.getElementById(id).value;if(v)navigator.clipboard.writeText(v);}
+</script>
+</body>
+</html>

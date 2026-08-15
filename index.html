@@ -14,10 +14,6 @@
 <meta property="og:description" content="Convert between binary, octal, decimal, and hexadecimal instantly. Free, client-side, no data sent anywhere."/>
 <meta property="og:url" content="https://number-base-converter.tabutility.com/"/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="https://number-base-converter.tabutility.com/og-image.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta name="twitter:image" content="https://number-base-converter.tabutility.com/og-image.png"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Number Base Converter","url":"https://number-base-converter.tabutility.com/","description":"Free online number base converter. Convert between binary, octal, decimal, and hexadecimal instantly.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Number Base Converter","item":"https://number-base-converter.tabutility.com/"}]}</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
@@ -125,7 +121,12 @@ ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibilit
     <a href="https://base64-encoder.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Base64 Encoder</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
     <a href="https://uuid-generator.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">UUID Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
     <a href="https://hex-to-rgb.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">HEX to RGB Converter</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
-  </div>
+  
+      <a href="https://meta-tags-generator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Meta Tags Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">SEO</div></a>
+      <a href="https://schema-markup-generator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Schema Markup Generator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">SEO</div></a>
+    </div>
   <div class="card">
     <h2>Frequently Asked Questions</h2>
     <details class="faq-item"><summary>Why do computers use binary?</summary><p>Computers use binary because transistors — the fundamental building blocks — have two states: on (1) and off (0). This maps perfectly to binary. Everything a computer does, from adding numbers to displaying images, ultimately reduces to manipulating sequences of 0s and 1s.</p></details>
@@ -164,41 +165,5 @@ function convert(source,val,base){
 }
 function copyField(id){const v=document.getElementById(id).value;if(v)navigator.clipboard.writeText(v);}
 </script>
-
-<section id="seo-content">
-<style>
-#seo-content{max-width:660px;margin:40px auto 0;padding:0 20px 48px;font-family:'Segoe UI',system-ui,Arial,sans-serif;color:#94a3b8;line-height:1.7;font-size:15px}
-#seo-content h2{color:#f1f5f9;font-size:22px;margin:0 0 12px}
-#seo-content h3{color:#f1f5f9;font-size:18px;margin:28px 0 10px}
-#seo-content h4{color:#f1f5f9;font-size:15px;margin:18px 0 4px}
-#seo-content p{margin:0 0 12px}
-#seo-content .example{background:#1e293b;border:1px solid rgba(255,255,255,0.08);border-left:3px solid #4f46e5;border-radius:10px;padding:14px 16px;margin:12px 0;color:#cbd5e1;font-size:14px}
-#seo-content .example strong{color:#f1f5f9}
-#seo-content code{background:#0f172a;border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:1px 5px;font-size:13px;color:#c7d2fe}
-#seo-content .faq p{color:#94a3b8}
-</style>
-
-<h2>What is the Number Base Converter?</h2>
-<p>The Number Base Converter translates a value between binary, octal, decimal, and hexadecimal. Enter a number in any base and instantly see its equivalent in the others — a must-have for programmers, students, and anyone working close to the hardware.</p>
-<h3>How it works</h3>
-<p>Every number system is positional: each digit is multiplied by the base raised to its position. In base <em>b</em> the value is <code>Σ dᵢ · bⁱ</code>. The tool first reads your input into a single integer, then repeatedly divides by the target base and collects remainders to build the output digits. Binary is base 2, octal base 8, decimal base 10, and hexadecimal base 16 (digits 0–9 then A–F).</p>
-<div class="example"><strong>Example 1:</strong> Decimal <strong>255</strong> = binary <code>11111111</code> = octal <code>377</code> = hexadecimal <code>FF</code>.</div>
-<div class="example"><strong>Example 2:</strong> Binary <code>101101</code> = 32+8+4+1 = decimal <strong>45</strong> = hexadecimal <code>2D</code> = octal <code>55</code>.</div>
-<h3>When to use it</h3>
-<p>Decode a hex colour code or memory address while debugging. Check Unix file permissions expressed in octal. Complete a computer-science homework problem. Or verify a bitmask by reading it in binary and confirming its decimal value.</p>
-<h3>FAQ</h3>
-<div class="faq">
-<h4>Why do computers use binary?</h4>
-<p>Digital circuits have two stable states — on and off — which map naturally to the 1s and 0s of binary, making it the simplest reliable way to store and process data.</p>
-<h4>Why is hexadecimal used in programming?</h4>
-<p>Hex is compact: one hex digit represents exactly four binary bits, so long binary values (like colours or memory addresses) become short and readable.</p>
-<h4>How do I convert binary to decimal manually?</h4>
-<p>Multiply each bit by its power of two based on position and add the results — for example 1011 = 8 + 0 + 2 + 1 = 11.</p>
-<h4>What is octal used for?</h4>
-<p>Octal groups bits in threes and is still seen in file permissions on Unix-like systems, such as 755 or 644.</p>
-<h4>Is the Number Base Converter free?</h4>
-<p>Yes. It converts instantly in your browser with no sign-up and no data leaving your device.</p>
-</div>
-</section>
 </body>
 </html>

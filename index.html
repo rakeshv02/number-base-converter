@@ -140,6 +140,95 @@ ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibilit
     <details class="faq-item"><summary>Is there a limit to the size of number I can convert?</summary><p>JavaScript uses 64-bit floating-point numbers (IEEE 754), which means integers are exact up to 2^53 − 1 (about 9 quadrillion). Beyond that, precision may be lost. For very large numbers, use a dedicated big-integer library.</p></details>
   </div>
 </div>
+
+<section id="seo-content">
+  <style>
+    #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:'Segoe UI',system-ui,Arial,sans-serif;color:#334155;line-height:1.7}
+    #seo-content h2{font-size:1.35rem;color:#0f172a;margin:2rem 0 .75rem}
+    #seo-content h3{font-size:1.05rem;color:#0f172a;margin:1.25rem 0 .5rem}
+    #seo-content p,#seo-content li{font-size:.95rem}
+    #seo-content ul{padding-left:1.4rem;margin:.5rem 0}
+    #seo-content .example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0;font-family:monospace;font-size:.9rem}
+    @media(prefers-color-scheme:dark){#seo-content{color:#cbd5e1}#seo-content h2,#seo-content h3{color:#f1f5f9}#seo-content .example{background:#1e293b;border-color:#334155}}
+  </style>
+  <h2>How to Use the Number Base Converter</h2>
+  <p>The Number Base Converter instantly converts numbers between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16). Type a value into any of the four fields and all the other fields update automatically in real time. There is no button to press — the conversion is live as you type. This makes it easy to explore how the same number is represented across different numeral systems, double-check conversions when working on programming problems, or quickly translate between formats without stepping through the arithmetic manually.</p>
+  <p>Computers fundamentally operate in binary — every piece of data is ultimately stored as zeros and ones. Decimal is the base-10 system humans use every day, with digits 0–9. Octal (base 8) was historically common in early computing and still appears in Unix file permissions. Hexadecimal (base 16) uses digits 0–9 and letters A–F to represent values 0–15, and is ubiquitous in programming: HTML colour codes, memory addresses, byte values, and debugging output are almost universally expressed in hex because two hex digits exactly represent one byte (8 bits), making it far more compact than binary while still mapping directly onto computer memory.</p>
+  <p>Understanding these number bases is fundamental for computer science students, software developers, embedded systems engineers, and network administrators. Binary is used in bitwise operations, boolean logic, and CPU instruction sets. Hex appears in CSS colours (e.g., #1A2B3C), IPv6 addresses, Unicode code points, and assembly language. Octal permissions in Linux/Unix (e.g., chmod 755) use base 8 because the three octal digits map neatly onto the three permission groups (owner, group, others) with read/write/execute values of 4, 2, and 1. The converter handles all these scenarios without requiring any manual calculation.</p>
+
+  <h2>Common Use Cases</h2>
+  <ul>
+    <li><strong>CSS colour codes:</strong> Convert a hex colour like #FF8C00 to its decimal RGB components (255, 140, 0) for use in JavaScript or design work.</li>
+    <li><strong>Unix file permissions:</strong> Quickly confirm what <code>chmod 755</code> means in binary (rwxr-xr-x) and why those octal values correspond to those permissions.</li>
+    <li><strong>Computer science study:</strong> Practice and verify binary-to-decimal conversions for coursework and exams.</li>
+    <li><strong>Network/IP work:</strong> Convert IPv6 address segments between hex and decimal during network configuration or debugging.</li>
+    <li><strong>Embedded programming:</strong> Convert register values, bitmasks, and memory addresses between hex and binary when writing low-level code.</li>
+    <li><strong>Bitwise operations:</strong> Visualise how AND, OR, XOR, and NOT operations work by seeing values in binary alongside their decimal equivalents.</li>
+  </ul>
+
+  <div class="example">Decimal 255 = Binary 11111111 = Octal 377 = Hex FF (one fully set byte — the maximum value of an 8-bit unsigned integer)</div>
+  <div class="example">Decimal 42 = Binary 101010 = Octal 52 = Hex 2A</div>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>Why is hexadecimal used in programming?</h3>
+  <p>Hexadecimal is used because it maps cleanly onto binary. One hex digit represents exactly four bits (a nibble), so two hex digits represent exactly one byte (8 bits). This makes hex far more compact than binary for expressing memory addresses, byte values, and colour codes, while still having a direct, mechanical relationship to the underlying binary representation that decimal does not.</p>
+  <h3>What is the highest number each base can represent with a given number of digits?</h3>
+  <p>With n digits: binary can represent 2ⁿ values (0 to 2ⁿ−1), octal can represent 8ⁿ values, decimal can represent 10ⁿ values, and hexadecimal can represent 16ⁿ values. With 2 digits: binary = 0–3, hex = 0–255. This is why hex is so efficient — two characters cover the full range of a single byte.</p>
+  <h3>How do Unix file permissions use octal?</h3>
+  <p>Unix permissions are represented as three groups of three bits (read=4, write=2, execute=1). Each group's bits sum to a single octal digit. So permissions 111 101 101 in binary = 7 5 5 in octal = chmod 755 = owner can read/write/execute, group and others can read and execute only.</p>
+  <h3>Does the converter handle negative numbers?</h3>
+  <p>The converter works with non-negative integers. Negative numbers in binary are typically represented using two's complement in computer systems, which requires knowing the word size (8-bit, 16-bit, etc.) — this is handled by the processor or programming language, not by a simple base converter.</p>
+  <h3>What are valid hexadecimal digits?</h3>
+  <p>Hex uses digits 0–9 for values zero through nine, and letters A–F (or a–f) for values ten through fifteen. A = 10, B = 11, C = 12, D = 13, E = 14, F = 15. Hex is case-insensitive, so 1a2b and 1A2B represent the same value.</p>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is hexadecimal used in programming?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hexadecimal maps cleanly onto binary — one hex digit represents four bits, and two hex digits represent exactly one byte. This makes hex compact and directly mappable to memory, unlike decimal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Unix file permissions use octal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unix permissions are three groups of three bits (read=4, write=2, execute=1). Each group sums to one octal digit. chmod 755 means owner can read/write/execute (7), group and others can read and execute (5)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the highest number two hex digits can represent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two hex digits can represent 16² = 256 values (0 to 255 decimal, or 00 to FF in hex), which is exactly the range of one byte (8 bits)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the converter handle negative numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The converter works with non-negative integers. Negative numbers in binary use two's complement which requires knowing the word size — this is handled by the processor or programming language."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are valid hexadecimal digits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hex uses 0–9 for values zero through nine and A–F (or a–f) for values ten through fifteen. Hex is case-insensitive, so 1a2b and 1A2B represent the same value."
+      }
+    }
+  ]
+}
+</script>
 <footer>© 2024 Tabutility · 100% client-side · <a href="https://tabutility.com" style="color:#6366f1">All Tools</a></footer>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do computers use binary?","acceptedAnswer":{"@type":"Answer","text":"Computers use binary because transistors have two states: on (1) and off (0), mapping perfectly to binary."}},{"@type":"Question","name":"Why is hexadecimal used in programming?","acceptedAnswer":{"@type":"Answer","text":"One hex digit represents exactly 4 binary bits. Two hex digits = one byte, making it compact and human-readable."}},{"@type":"Question","name":"How do I convert binary to decimal manually?","acceptedAnswer":{"@type":"Answer","text":"Each binary digit represents a power of 2 from the right. For 1011: (1×8)+(0×4)+(1×2)+(1×1) = 11."}},{"@type":"Question","name":"What is octal used for?","acceptedAnswer":{"@type":"Answer","text":"Octal is most commonly seen in Unix/Linux file permissions (e.g., chmod 755). Each digit represents 3 binary bits."}}]}</script>
 <script>
